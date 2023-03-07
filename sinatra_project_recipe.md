@@ -14,6 +14,7 @@ You'll need to include:
   * the HTTP method => GET
   * the path => /names
   * any query parameters (passed in the URL) => [:name]
+  name (string)
   * or body parameters (passed in the request body) => This is a GET, so not applicable
 
 
@@ -28,30 +29,10 @@ Your response might return plain text, JSON, or HTML code.
 
 _Replace the below with your own design. Think of all the different possible responses your route will return._
 
-```html
-<!-- EXAMPLE -->
-<!-- Response when the post is found: 200 OK -->
 
-<html>
-  <head></head>
-  <body>
-    <h1>Post title</h1>
-    <div>Post content</div>
-  </body>
-</html>
-```
 
 ```html
-<!-- EXAMPLE -->
-<!-- Response when the post is not found: 404 Not Found -->
 
-<html>
-  <head></head>
-  <body>
-    <h1>Sorry!</h1>
-    <div>We couldn't find this post. Have a look at the homepage?</div>
-  </body>
-</html>
 ```
 
 ## 3. Write Examples
@@ -61,7 +42,7 @@ _Replace these with your own design._
 ```
 # Request:
 
-GET /posts?id=1
+GET /names?
 
 # Expected response:
 
@@ -71,7 +52,7 @@ Response for 200 OK
 ```
 # Request:
 
-GET /posts?id=276278
+GET /names?
 
 # Expected response:
 
@@ -81,8 +62,7 @@ Response for 404 Not Found
 ## 4. Encode as Tests Examples
 
 ```ruby
-# EXAMPLE
-# file: spec/integration/application_spec.rb
+# file: spec/integration/app_spec.rb
 
 require "spec_helper"
 
