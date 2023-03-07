@@ -1,21 +1,20 @@
-# {{ GET }} {{ names}} Route Design Recipe
+# {{ POST }} {{ sort-names }} Route Design Recipe
 
 _Copy this design recipe template to test-drive a Sinatra route._
 
 # Request:
-GET /names
+POST /sort-names
 
 # Expected response (2OO OK):
-Julia, Mary, Karim
+Alice,Joe,Julia,Kieran,Zoe
 
 ## 1. Design the Route Signature
 
 You'll need to include:
-  * the HTTP method => GET
-  * the path => /names
-  * any query parameters (passed in the URL) => [:name]
-  name (string)
-  * or body parameters (passed in the request body) => This is a GET, so not applicable
+  * the HTTP method => POST
+  * the path => /sort-names
+  * any query parameters (passed in the URL)
+  * or body parameters (passed in the request body) => names
 
 
 
@@ -42,17 +41,19 @@ _Replace these with your own design._
 ```
 # Request:
 
-GET /names?
+POST /sort-names
 
 # Expected response:
 
 Response for 200 OK
+Alice,Joe,Julia,Kieran,Zoe
+
 ```
 
 ```
 # Request:
 
-GET /names?
+GET /sort-names
 
 # Expected response:
 
