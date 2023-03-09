@@ -25,9 +25,9 @@ describe Application do
 
   context 'GET /hello' do
     it "returns a greeting message as an HTML page" do
-    response = post('/hello')
+    response = get('/hello')
     expect(response.status).to be(200)
-    expect(response.body).to eq("Hello!")
+    expect(response.body).to include('<h1>Hello!</h1>')
     end
   end
 

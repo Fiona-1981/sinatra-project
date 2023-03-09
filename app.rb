@@ -18,10 +18,13 @@ class Application < Sinatra::Base
   #p ordered_names
 
 
-  post '/sort-names' do
-    names = params[:names]
-    ordered_names = names.split(",").sort
-    ordered_names.join(",")
-  end
+  # post '/sort-names' do
+  #  names = params[:names]
+  # ordered_names = names.split(",").sort
+  #  ordered_names.join(",")
+  # end
 
+  get '/hello' do
+    return erb(:index)
+  end
 end
