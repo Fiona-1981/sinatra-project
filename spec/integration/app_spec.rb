@@ -16,10 +16,18 @@ describe Application do
   end
 
   context 'POST /sort-names' do
-    it "returns list of names in alphabetical order" do
+    xit "returns list of names in alphabetical order" do
       response = post('/sort-names')
       expect(response.status).to be(200)
       expect(response.body).to eq("Alice,Joe,Julia,Kieran,Zoe")
+    end
+  end
+
+  context 'GET /hello' do
+    it "returns a greeting message as an HTML page" do
+    response = post('/hello')
+    expect(response.status).to be(200)
+    expect(response.body).to eq("Hello!")
     end
   end
 

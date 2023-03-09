@@ -11,16 +11,17 @@ class Application < Sinatra::Base
   #   return "Julia, Mary, Karim"
   # end
   
-  names = "Joe,Alice,Zoe,Julia,Kieran".split(",")
-  ordered_names = names.sort.join(",")
+  # names = "Joe,Alice,Zoe,Julia,Kieran".split(",")
+  # ordered_names = names.sort.join(",")
 
-  p names
-  p ordered_names
+  #p names
+  #p ordered_names
 
 
   post '/sort-names' do
-    # names = params[:names]
-    return ordered_names
+    names = params[:names]
+    ordered_names = names.split(",").sort
+    ordered_names.join(",")
   end
 
 end
